@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "forTUNE Serial Filler",
+  "description": "Batch-manage serial numbers and semi-automatically fill up to 10 serial fields on forTUNE ticket pages.",
+  "version": "0.3.2",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Serial Filler"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://ticket.fortunemeets.app/*",
+    "https://*.fortunemeets.app/*",
+    "https://fortunemusic.jp/*",
+    "https://*.fortunemusic.jp/*",
+    "https://fortunemusic.app/*",
+    "https://*.fortunemusic.app/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ticket.fortunemeets.app/*",
+        "https://*.fortunemeets.app/*",
+        "https://fortunemusic.jp/*",
+        "https://*.fortunemusic.jp/*",
+        "https://fortunemusic.app/*",
+        "https://*.fortunemusic.app/*"
+      ],
+      "js": [
+        "i18n.js",
+        "serial-core.js",
+        "page-dom.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

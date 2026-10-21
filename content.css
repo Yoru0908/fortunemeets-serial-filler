@@ -1,0 +1,314 @@
+#__fortune_serial_filler_button__,
+#__fortune_serial_filler_panel__ {
+  all: initial;
+  box-sizing: border-box;
+  color: #17202e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif;
+}
+
+#__fortune_serial_filler_button__ {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483646;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  background: #13a678;
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.22);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0;
+  touch-action: manipulation;
+}
+
+#__fortune_serial_filler_button__:hover {
+  background: #0f8f68;
+}
+
+#__fortune_serial_filler_panel__ {
+  position: fixed;
+  right: 18px;
+  bottom: 70px;
+  z-index: 2147483647;
+  display: none;
+  width: min(342px, calc(100vw - 24px));
+  max-height: min(660px, calc(100vh - 92px));
+  overflow: auto;
+  border: 1px solid #d9e0e8;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.2);
+}
+
+#__fortune_serial_filler_panel__.__fsf_open {
+  display: block;
+}
+
+#__fortune_serial_filler_panel__ * {
+  box-sizing: border-box;
+  font-family: inherit;
+  letter-spacing: 0;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf1f5;
+  background: #fbfcfe;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_title {
+  margin: 0;
+  color: #17202e;
+  font-size: 16px;
+  font-weight: 760;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_ver {
+  color: #637086;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #66758a;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_header_tools {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_lang {
+  height: 28px;
+  padding: 2px 6px;
+  border: 1px solid #d8dee6;
+  border-radius: 6px;
+  background: #fff;
+  color: #17202e;
+  font-size: 12px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_close:hover {
+  background: #eef2f6;
+  color: #17202e;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_body {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_stat {
+  min-width: 0;
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+  background: #fbfdff;
+  padding: 9px 4px 8px;
+  text-align: center;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_stat strong {
+  display: block;
+  color: #17202e;
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 760;
+  line-height: 1.05;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_stat span,
+#__fortune_serial_filler_panel__ .__fsf_hint {
+  color: #637086;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+#__fortune_serial_filler_panel__ textarea,
+#__fortune_serial_filler_panel__ .__fsf_input {
+  width: 100%;
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #17202e;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px;
+  outline: none;
+}
+
+#__fortune_serial_filler_panel__ textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_input {
+  min-height: 38px;
+  padding: 8px 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+#__fortune_serial_filler_panel__ textarea:focus,
+#__fortune_serial_filler_panel__ .__fsf_input:focus {
+  border-color: #13a678;
+  box-shadow: 0 0 0 3px rgba(19, 166, 120, 0.14);
+}
+
+#__fortune_serial_filler_panel__ textarea::placeholder,
+#__fortune_serial_filler_panel__ .__fsf_input::placeholder {
+  color: #8a95a5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_manual_row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn {
+  min-width: 0;
+  min-height: 38px;
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #263244;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 8px 10px;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn:hover:not(:disabled) {
+  border-color: #c6d0db;
+  background: #f6f8fb;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_primary {
+  width: 100%;
+  min-height: 44px;
+  border-color: #13a678;
+  background: #13a678;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(19, 166, 120, 0.2);
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_primary:hover:not(:disabled) {
+  border-color: #0f8f68;
+  background: #0f8f68;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_danger {
+  border-color: #e45b55;
+  background: #fff6f5;
+  color: #b43732;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_danger:hover:not(:disabled) {
+  background: #ffeeed;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_warning {
+  border-color: #f59e0b;
+  background: #fffbeb;
+  color: #b45309;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn_warning:hover:not(:disabled) {
+  background: #fef3c7;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_btn:disabled {
+  border-color: #e5eaf0;
+  background: #f8fafc;
+  color: #98a2b3;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_batch {
+  display: grid;
+  gap: 5px;
+  max-height: 120px;
+  overflow: auto;
+  margin: -2px 0 0;
+  padding-left: 20px;
+  color: #263244;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_batch li {
+  padding: 2px 0;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_groups {
+  display: grid;
+  gap: 6px;
+  max-height: 180px;
+  overflow: auto;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_group {
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+  background: #fbfdff;
+  padding: 6px 10px;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_group summary {
+  cursor: pointer;
+  color: #263244;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#__fortune_serial_filler_panel__ .__fsf_group .__fsf_batch {
+  max-height: none;
+  margin-top: 4px;
+}
+
+#__fortune_serial_filler_panel__ [data-fsf-message] {
+  min-height: 17px;
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>forTUNE Serial Filler</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Serial Filler</h1>
+          <p id="pageStatus" data-i18n="page.checking"></p>
+        </div>
+        <div class="headerTools">
+          <select id="langSelect" class="langSelect" data-i18n-aria-label="label.language"></select>
+          <button id="exportButton" class="iconButton" type="button" data-i18n="btn.export" data-i18n-title="label.exportTitle"></button>
+        </div>
+      </header>
+
+      <section class="stats" data-i18n-aria-label="label.statsAria">
+        <div>
+          <strong id="totalCount">0</strong>
+          <span data-i18n="stat.total"></span>
+        </div>
+        <div>
+          <strong id="unusedCount">0</strong>
+          <span data-i18n="stat.unused"></span>
+        </div>
+        <div>
+          <strong id="pendingCount">0</strong>
+          <span data-i18n="stat.pending"></span>
+        </div>
+        <div>
+          <strong id="successCount">0</strong>
+          <span data-i18n="stat.success"></span>
+        </div>
+        <div>
+          <strong id="failedCount">0</strong>
+          <span data-i18n="stat.failed"></span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <label for="importText" data-i18n="label.importBatch"></label>
+        <textarea id="importText" rows="5" spellcheck="false" data-i18n-placeholder="placeholder.import"></textarea>
+        <div class="row">
+          <button id="importButton" type="button" data-i18n="btn.import"></button>
+          <button id="clearImportButton" class="secondary" type="button" data-i18n="btn.clearInput"></button>
+        </div>
+        <div class="row manualRow">
+          <input id="manualSerial" type="text" spellcheck="false" autocomplete="off" data-i18n-placeholder="placeholder.manual">
+          <button id="manualAddButton" type="button" data-i18n="btn.manualAdd"></button>
+        </div>
+        <p id="importResult" class="hint"></p>
+      </section>
+
+      <section class="panel actions">
+        <button id="fillNextButton" class="primary" type="button" data-i18n="btn.fillNext"></button>
+        <div class="row">
+          <button id="markSuccessButton" type="button" data-i18n="btn.markSuccess"></button>
+          <button id="markFailedButton" class="danger" type="button" data-i18n="btn.markFailed"></button>
+        </div>
+        <div class="row">
+          <button id="retryFailedButton" class="secondary" type="button" data-i18n="btn.retry"></button>
+          <button id="releasePendingButton" class="secondary" type="button" data-i18n="btn.release"></button>
+        </div>
+        <p id="actionResult" class="hint"></p>
+      </section>
+
+      <section class="panel">
+        <div class="sectionHeader">
+          <h2 data-i18n="label.currentBatch"></h2>
+          <span id="currentBatchLabel"></span>
+        </div>
+        <ol id="currentBatchList" class="batchList"></ol>
+      </section>
+
+      <section class="panel">
+        <div class="sectionHeader">
+          <h2 data-i18n="label.groupsPreview"></h2>
+          <span id="groupsLabel" class="hint"></span>
+        </div>
+        <div id="poolGroups" class="poolList"></div>
+      </section>
+
+      <section class="panel">
+        <div class="sectionHeader">
+          <h2 data-i18n="label.pool"></h2>
+          <select id="statusFilter" data-i18n-aria-label="label.filterAria">
+            <option value="all" data-i18n="filter.all"></option>
+            <option value="unused" data-i18n="status.unused"></option>
+            <option value="pending" data-i18n="status.pending"></option>
+            <option value="success" data-i18n="status.success"></option>
+            <option value="failed" data-i18n="status.failed"></option>
+            <option value="duplicate" data-i18n="status.duplicate"></option>
+            <option value="skipped" data-i18n="status.skipped"></option>
+          </select>
+        </div>
+        <div id="poolList" class="poolList"></div>
+      </section>
+
+      <footer class="footer">
+        <button id="clearUnusedButton" class="linkDanger" type="button" data-i18n="btn.clearUnused"></button>
+        <button id="resetButton" class="linkDanger" type="button" data-i18n="btn.reset"></button>
+      </footer>
+    </main>
+    <script src="i18n.js"></script>
+    <script src="serial-core.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
